@@ -71,7 +71,7 @@ spec:
               {{- end }}
               {{- end }}
               echo 'Flows downloaded' && 
-              langflow run --backend-only --host 0.0.0.0 --port {{ .Values.service.port }}
+              while true; do sleep 10; done
           env:
             - name: LANGFLOW_LOAD_FLOWS_PATH
               value: "{{ .Values.downloadFlows.path }}"
